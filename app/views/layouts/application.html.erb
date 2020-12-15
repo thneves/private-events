@@ -10,8 +10,13 @@
   </head>
 
   <body>
-    <%= link_to "Events", '#' %><br>
-    <%= link_to "Sign up signup_path", '#' %>
+    <%= link_to "Events", root_path %><br>
+    <% if logged_in? %>
+        <%= link_to "Log out", logout_path, method: :delete %>
+    <% else %>
+        <%= link_to "Log in", login_path %>
+        <%= link_to "Sign up", signup_path %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
