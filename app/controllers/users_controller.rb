@@ -3,10 +3,13 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def index
+  end
+
   def create
     @user = User.new(user_params)
     @user.save
-    redirect_to user_path(@user)
+    redirect_to new_session_path
   end
 
   def show
