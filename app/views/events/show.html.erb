@@ -1,0 +1,7 @@
+<h1>Events</h1>
+
+<%= current_user.username %>
+
+<% @event.attendees do |a| %>
+  <li class="list-group-item"><%= a.username%></li>
+<%end%>
