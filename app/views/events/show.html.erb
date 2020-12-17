@@ -1,7 +1,5 @@
 <h1>Events</h1>
 
-<%= current_user.username %>
-
-<% @attendences.each do |a| %>
-  <li class="list-group-item"><%= a.attended_event %></li>
+<% @event.attendences.each do |a| %>
+   <%= User.find(a.event_attende_id).username %><br>
 <%end%>
