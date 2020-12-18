@@ -1,6 +1,8 @@
 <h1>Users</h1>
 
-<%= @user.username %><br><br>
+<%= current_user.username %><br><br>
+
+<p>Here we show all the events create by the current user</p>
 
 <% current_user.created_events.all.each do |event|%>
   <%= event.description %><br>

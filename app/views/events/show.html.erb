@@ -1,4 +1,4 @@
-<h1>Events</h1>
+<h1>Show all the user that are going to attend to the events</h1>
 
 <% @event.attendences.each do |a| %>
    <%= User.find(a.event_attende_id).username %><br>

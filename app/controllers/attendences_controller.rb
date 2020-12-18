@@ -14,6 +14,7 @@ class AttendencesController < ApplicationController
   
     if @attendence.save
       redirect_to events_path
+      flash[:notice] = "Your subscription to this event is approved!"
     else
       render 'new'
     end
