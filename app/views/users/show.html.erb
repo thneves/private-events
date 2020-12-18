@@ -1,15 +1,21 @@
-<h1>Users</h1>
 
-<%= @user.username %><br><br>
+<div class="text-center">
+  <h1>My Events</h1>
 
-<p>Here we show all the events create by the current user</p>
+
+<h3>My Created Events:</h3>
 
 <% @user.created_events.all.each do |event|%>
-  <%= event.title %><br>
+  <%= event.title %>
+  <%= link_to 'Events Details', event_path(event) %>
 <%end%>
 
-<p>Here we show the events the User is going to attende</p>
+<h3>Events I'm Going to:</h3>
 
 <% current_user.attended_events.all.each do |event|%>
   <%= event.title %><br>
+  <%= link_to 'Events Details', event_path(event) %>
 <%end%>
+</div>
+
+

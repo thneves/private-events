@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ .new_event {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: 300px;
+   margin: 0 auto;
+  }

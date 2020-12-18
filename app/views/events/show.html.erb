@@ -1,6 +1,13 @@
-<h1>Show all the user that are going to attend to the events</h1>
+<div class="text-center">
+<% @event.attendences.each do |a| %>
+   <%= Event.find(a.attended_event_id).title %><br>
+   <% break %>
+<%end %>
+
+<h1>People going to this event:</h1>
 
 <% @event.attendences.each do |a| %>
    <%= User.find(a.event_attende_id).username %><br>
-   <%= link_to 'Attendee Details', user_path(User.find(a.event_attende_id).id) %>
 <%end%>
+</div>
+
