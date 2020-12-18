@@ -2,4 +2,5 @@
 
 <% @event.attendences.each do |a| %>
    <%= User.find(a.event_attende_id).username %><br>
+   <%= link_to 'Attendee Details', user_path(User.find(a.event_attende_id).id) %>
 <%end%>

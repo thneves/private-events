@@ -11,5 +11,6 @@
   <% if !logged_in? %>
     <%= link_to "Log In", new_session_path %>
    <% else %>
-    <%= link_to "Log Out", session_path(session[:username]), method: :delete %><br>
+   <%= link_to "Create a new Event", new_event_path %><br>
+   <%= link_to "Log Out", session_path(session[:username]), method: :delete %><br>
   <% end %>
