@@ -1,9 +1,24 @@
 <h1>All Events - INDEX</h1>
 
-<% @events.each do |event| %>
+<h2> Upcoming Events </h2>
+<% @upcoming.each do |event| %>
+    <%= event.title %><br>
     <%= event.description %><br>
+    <%= event.location %><br>
+    <%= event.date %><br>
     <% if logged_in? %>
       <%= link_to 'Attend', attendences_path(:attended_event_id => event.id, :event_attende_id => current_user.id), :method => :post %><br>
+      <%= link_to 'Events Details', event_path(event) %>
+    <% end %>
+  <% end %>
+
+<h2>Past Events</h2>
+  <% @past.each do |event| %>
+     <%= event.title %><br>
+    <%= event.description %><br>
+    <%= event.location %><br>
+    <%= event.date %><br>
+    <% if logged_in? %>
       <%= link_to 'Events Details', event_path(event) %>
     <% end %>
   <% end %>

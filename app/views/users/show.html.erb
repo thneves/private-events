@@ -5,5 +5,11 @@
 <p>Here we show all the events create by the current user</p>
 
 <% @user.created_events.all.each do |event|%>
-  <%= event.description %><br>
+  <%= event.title %><br>
+<%end%>
+
+<p>Here we show the events the User is going to attende</p>
+
+<% current_user.attended_events.all.each do |event|%>
+  <%= event.title %><br>
 <%end%>

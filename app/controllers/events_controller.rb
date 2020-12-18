@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   def index
     @events = Event.all
+    @upcoming = Event.upcoming
+    @past = Event.past.sort { |a, b| b.date <=> a.date }
   end
   
   def new
@@ -28,7 +30,7 @@ class EventsController < ApplicationController
   private
   
   def event_params
-    params.require(:event).permit(:description)
+    params.require(:event).permit(:description, :title, :date, :location)
   end
 
 end
