@@ -21,3 +21,16 @@
    width: 300px;
    margin: 0 auto;
   }
+
+  .font-one {
+    font-family: 'russo One', sans-serif;
+  }
+
+  .font-two {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .nav-link-left:hover {
+    font-weight: bold;
+  }
+
