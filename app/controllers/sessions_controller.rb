@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "Welcome to private events, #{@user.username}!!"
       redirect_to root_path
     else
+      flash[:notice] = "Username not found, register your username"
       redirect_to '/users/new'
     end 
   end

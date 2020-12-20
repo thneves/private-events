@@ -19,16 +19,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
   <script src="https://kit.fontawesome.com/0a8239681c.js" crossorigin="anonymous"></script>
-    <title>Hello, world!</title>
+    <title>Private Events</title>
   </head>
   <body>
     <%= render '/layouts/nav' %>
-    <% flash.each do |type, msg| %>
-        <div>
+    <div class="bg-success">
+        <% flash.each do |type, msg| %>
+        <p class="text-white fw-bold font-two pt-2 pb-2">
           <%= msg %>
-        </div>
+        </p>
       <% end %>
-    
+    </div>   
       <%= yield %>
     </body>
 
