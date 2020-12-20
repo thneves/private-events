@@ -25,10 +25,10 @@
     <ul class="navbar-nav d-flex justify-content-end align-items-center me-3">
     <% if !logged_in? %>
       <li class="nav-item">
-        <%= link_to "Log In", new_session_path, class: "nav-link text-primary font-two" %>
+        <%= link_to "Log In", new_session_path, class: "nav-link text-success font-two" %>
       </li>
       <li class="nav-item">
-        <%= link_to 'Register', new_session_path, class: "nav-link text-success font-two" %>
+        <%= link_to 'Register', new_user_path, class: "nav-link text-primary font-two" %>
       </li>
       <% else %>
       <li class="nav-item d-flex align-items-center font-two">
