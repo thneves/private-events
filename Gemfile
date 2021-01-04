@@ -30,11 +30,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'hirb', '~> 0.7.3'
 
 group :development, :test do
+  gem 'rspec-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
+  gem 'capybara', '>= 2.15'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
