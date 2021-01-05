@@ -1,8 +1,9 @@
-class SessionsController < ApplicationController
-  def new
-  end
+# frozen_string_literal: true
 
-  def create 
+class SessionsController < ApplicationController
+  def new; end
+
+  def create
     @user = User.find_by(username: params[:username])
     if @user
       session[:user_id] = @user.id
@@ -10,9 +11,9 @@ class SessionsController < ApplicationController
       flash[:notice] = "Welcome to private events, #{@user.username}!!"
       redirect_to root_path
     else
-      flash[:notice] = "Username not found, register your username"
+      flash[:notice] = 'Username not found, register your username'
       redirect_to '/users/new'
-    end 
+    end
   end
 
   def destroy
