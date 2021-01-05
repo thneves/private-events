@@ -7,7 +7,6 @@ class EventsController < ApplicationController
   
   def new
     @event = current_user.created_events.new
-    # @user = @event.creator
   end
   
   def create
@@ -26,11 +25,10 @@ class EventsController < ApplicationController
     @attendences = Attendence.all
     @users = User.all
   end
-    
+     
   private
   
   def event_params
     params.require(:event).permit(:description, :title, :date, :location)
   end
-
 end
