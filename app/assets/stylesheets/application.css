@@ -14,23 +14,19 @@
  *= require_self
  */
 
- .new_event {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   width: 300px;
-   margin: 0 auto;
-  }
-
-  .font-one {
-    font-family: 'russo One', sans-serif;
-  }
-
-  .font-two {
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  .nav-link-left:hover {
-    font-weight: bold;
-  }
-
+.new_event {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  margin: 0 auto;
+}
+.font-one {
+  font-family: 'russo One', sans-serif;
+}
+.font-two {
+  font-family: 'Montserrat', sans-serif;
+}
+.nav-link-left:hover {
+  font-weight: bold;
+}

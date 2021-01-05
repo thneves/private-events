@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Attendence < ApplicationRecord
   # validates_uniqueness_of :user, scope: :event
 
