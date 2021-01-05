@@ -23,9 +23,7 @@ class EventsController < ApplicationController
   
   def show
     @event = Event.find(params[:id])
-    <div class="bg-dark">
-    <%= link_to 'Attend Event', attendences_path(:attended_event_id => event.id, :event_attende_id => current_user.id), :method => :post %><br>
-  </div> @attendences = Attendence.all
+    @attendences = Attendence.all
     @users = User.all
   end
     
