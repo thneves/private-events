@@ -4,11 +4,10 @@
 
 # Project Description
 
-> Ruby on Rails - Associations:
+> Ruby on Rails - Private Events:
 - We created this App to allow users to create events and manage user signups. Users can create events and send invitations. A user can attend many events and an event can be attended by many users.
 
 - We styled the project with Bootstrap.
-
 - Models 
 - Data Structures & Relationships
 - Migrations
