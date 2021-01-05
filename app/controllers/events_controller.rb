@@ -7,7 +7,6 @@ class EventsController < ApplicationController
 
   def new
     @event = current_user.created_events.new
-    # @user = @event.creator
   end
 
   def create

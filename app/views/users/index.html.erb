@@ -1,14 +1,3 @@
 <h1>Private Events</h1>
 
-<% if logged_in? %>
-
-<p>You are logged in: <%= current_user.username %> </p>
-
-<%= link_to "Log Out", session_path(session[:username]), method: :delete %><br>
-
-<% else %>
-
-<%= link_to "Log In", new_session_path %>
-
-<% end %>
-
+<%= log_structure %>
