@@ -25,7 +25,7 @@ class EventsController < ApplicationController
     @attendences = Attendence.all
     @users = User.all
   end
-  
+
   private
 
   def event_params
